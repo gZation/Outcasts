@@ -1485,7 +1485,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -771, y: -391}
+  m_AnchoredPosition: {x: -741, y: -391}
   m_SizeDelta: {x: 175.9877, y: 84.815}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5036746208588244647
@@ -1509,15 +1509,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_Color: {r: 0.9528302, g: 0.85844606, b: 0.85844606, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
+  m_Maskable: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: -1869087312, guid: a37a0ad8133305149b561d8bff613e65, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1589,6 +1589,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 537018127144694828}
+        m_TargetAssemblyTypeName: UnityEngine.EventSystems.EventSystem, UnityEngine.UI
+        m_MethodName: SetSelectedGameObject
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 5926424639748316002}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2302,8 +2314,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -346, y: 4}
-  m_SizeDelta: {x: 512.5764, y: 118.5652}
+  m_AnchoredPosition: {x: -301.14, y: 4}
+  m_SizeDelta: {x: 602.29, y: 118.5652}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5041634119162982858
 CanvasRenderer:
@@ -2333,7 +2345,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You really want to stop so soon?
+  m_text: You sure you want to stop so soon?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 63f4bd437d38c714eb236feca9d965bf, type: 2}
   m_sharedMaterial: {fileID: 170141770562709392, guid: 63f4bd437d38c714eb236feca9d965bf, type: 2}
@@ -9663,7 +9675,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1281659812115077922
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16969,8 +16981,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 346, y: 4}
-  m_SizeDelta: {x: 512.5764, y: 118.5652}
+  m_AnchoredPosition: {x: 301.14, y: 4}
+  m_SizeDelta: {x: 602.29, y: 118.5652}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6057710039362625184
 CanvasRenderer:
@@ -17000,7 +17012,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: We might as well  camp here and pick up another day
+  m_text: We've been through enough adventures for one day
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 63f4bd437d38c714eb236feca9d965bf, type: 2}
   m_sharedMaterial: {fileID: 170141770562709392, guid: 63f4bd437d38c714eb236feca9d965bf, type: 2}
@@ -17179,8 +17191,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_startOnEnable: 1
   m_speed: 0.8
-  m_delay: -1
-  m_startEffect: 0
+  m_delay: 6
+  m_startEffect: 1
 --- !u!1 &8565416346614225608
 GameObject:
   m_ObjectHideFlags: 0

@@ -132,9 +132,17 @@ public class Gauntlet : Tool
         heldObject.transform.position = goal;
         ((AshePawn)m_user).IsDropping = false;
     }
-    public void DropHeldObject()
+    public Coroutine DropHeldObject()
     {
-        StartCoroutine(MoveOutOfAshePaws());
+        return StartCoroutine(MoveOutOfAshePaws());
+    }
+    public void ForceDropHeldObject()
+    {
+        var heldObject = ((AshePawn)m_user).HeldObject;
+        float dropDistance = ((AshePawn)m_user).Animator.GetFloat("MoveX")
+                    * heldObject.GetComponent<Collider2D>().bounds.extents.x
+                    + ((AshePawn)m_user).GetComponent<Collider2D>().bounds.size.x;
+        heldObject.transform.position = heldObject.transform.position + new Vector3(dropDistance, 0, 0);
     }
     public void FixedUpdate()
     {
