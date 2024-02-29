@@ -48,6 +48,7 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI m_playerPaused;
     public EventSystem EventSystem => m_eventSystem;
+    public InputSystemUIInputModule ISUIIM => m_inputSystemUIInputModule;
 
     private void Start()
     {

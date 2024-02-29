@@ -30,7 +30,7 @@ public class NailActivator : Invoker
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //count++;
-        if (collision.GetComponent<Projectile>() != null)
+        if (collision.GetComponent<Projectile>() != null || collision.GetComponent<Gauntlet>() != null)
         {
             m_audioSource.Play();
             if (!isActive)

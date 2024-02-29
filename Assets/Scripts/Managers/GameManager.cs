@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour, ISaveable
 
     [Header("Player Pawn Management")]
     [SerializeField] private PlayerInputManager m_pim;
+    [SerializeField] private InputActionAsset m_defaultActionAsset;
     [SerializeField] private TinkerPawn m_tinker;
     [SerializeField] private AshePawn m_ashe;
     private PlayerController m_tinkerPC;
@@ -51,6 +52,7 @@ public class GameManager : MonoBehaviour, ISaveable
     [SerializeField] private CharacterSelection m_characterSelection2;
     [SerializeField] private TextMeshProUGUI m_onScreenMessage;
     [SerializeField] private Animator m_cinematicCover;
+    [SerializeField] private GameObject m_teamSelection;
     [SerializeField] private SkipIndicator m_skipIndicator;
     public SkipIndicator SkipIndicator => m_skipIndicator;
 
@@ -386,6 +388,8 @@ public class GameManager : MonoBehaviour, ISaveable
         DialogueManager.Instance.StopDialogue();
         if (m_currScene == "hub")
         {
+            m_teamSelection.SetActive(true);
+            UIManager.Instance.ISUIIM.actionsAsset = m_defaultActionAsset;
             ChestTracker.Instance.ResetChestCount();
             GemTracker.Instance.ClearGemCount();
         }
@@ -500,7 +504,7 @@ public class GameManager : MonoBehaviour, ISaveable
         a_SaveData.Points = saved_wreckPoints;
         a_SaveData.PlayerTimeInSeconds = m_timeTracking;
     }
-    public void LoadGameProfile(string a_profile)
+    public bool LoadGameProfile(string a_profile)
     {
         if (FileManagment.LoadFromSaveFile(a_profile, out var json))
         {
@@ -508,7 +512,9 @@ public class GameManager : MonoBehaviour, ISaveable
             sd.LoadFromJson(json);
             LoadFromSaveData(sd);
             LoadToScene(sd.CurrScene); // Better here to not confuse game I hope
+            return true;
         }
+        return false;
     }
     public void LoadFromSaveData(SaveData a_SaveData)
     {

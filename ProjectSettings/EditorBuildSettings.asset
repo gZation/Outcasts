@@ -5,12 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/Official Game Scenes/wreckon_hub.unity
-    guid: 3fd9e1e3c4cd90f4087e2a45512bd5ba
   - enabled: 1
     path: Assets/Scenes/Official Game Scenes/Setup_Solo.unity
     guid: db51a5ae0c51f314ca78815c3f43307b
+  - enabled: 0
+    path: Assets/Scenes/Official Game Scenes/wreckon_hub.unity
+    guid: 3fd9e1e3c4cd90f4087e2a45512bd5ba
   - enabled: 0
     path: Assets/Scenes/Official Game Scenes/MainMenu.unity
     guid: 56a531fd4aa0d5540bb7d8cc3ffe5625
@@ -66,9 +66,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Official Game Scenes/Chase.unity
     guid: 8100de2507dfc9c4686ea1ae3cf7626b
   - enabled: 1
-    path: Assets/Scenes/Official Game Scenes/Air-3.unity
-    guid: 6fb93e9c249d84a4197f3a5374bd0998
-  - enabled: 1
     path: Assets/Scenes/Official Game Scenes/MeetingTheStatueNew.unity
     guid: f3dc3de60e84aec49a27ae05e97fa96a
+  - enabled: 1
+    path: Assets/Scenes/Official Game Scenes/Air-2.unity
+    guid: 47b00c3445757894eac4524268a23e56
   m_configObjects: {}

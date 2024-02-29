@@ -899,6 +899,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84b98c2ffc200a440bfa3d6c01117f37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &5170775643019900210 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 458207854633894028, guid: e4d2cf4b7982c9d4e843a3dc843d5796, type: 3}
+  m_PrefabInstance: {fileID: 4726994623011894718}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &5404310950892690880 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 821432757614307454, guid: e4d2cf4b7982c9d4e843a3dc843d5796, type: 3}
@@ -1133,6 +1138,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7831787968939226591}
     - target: {fileID: 1749331677707141446, guid: bc610330a7f446c488c3a28df7500c27, type: 3}
+      propertyPath: m_teamSelection
+      value: 
+      objectReference: {fileID: 5170775643019900210}
+    - target: {fileID: 1749331677707141446, guid: bc610330a7f446c488c3a28df7500c27, type: 3}
       propertyPath: m_cinematicCover
       value: 
       objectReference: {fileID: 8155315746334857059}
@@ -1156,6 +1165,10 @@ PrefabInstance:
       propertyPath: m_characterSelection
       value: 
       objectReference: {fileID: 5133138435997716654}
+    - target: {fileID: 1749331677707141446, guid: bc610330a7f446c488c3a28df7500c27, type: 3}
+      propertyPath: m_defaultActionAsset
+      value: 
+      objectReference: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
     - target: {fileID: 1749331677707141446, guid: bc610330a7f446c488c3a28df7500c27, type: 3}
       propertyPath: m_transitionAnimator
       value: 
