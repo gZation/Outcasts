@@ -12,6 +12,13 @@ public class Tourch : MonoBehaviour
     private Animator m_animator;
     private float duration_swap;
     private float duration_wind;
+    private TourchDetection detector;
+    public TourchDetection Detector
+    {
+        get { return detector; }
+        set { detector = value; }
+    }
+
     private void Start()
     {
        m_animator = GetComponent<Animator>();
@@ -47,6 +54,7 @@ public class Tourch : MonoBehaviour
         if ((collision.gameObject.tag == "Tinker" || collision.gameObject.tag == "Ashe") && unlit)
         {
             unlit = false;
+            detector.LitTourch();
         }
         if (collision.gameObject.tag == "Gauntlet")
         {

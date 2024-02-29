@@ -9,6 +9,7 @@ public class SkipIndicator : MonoBehaviour
     // Just let its values be contrable
     [SerializeField] private Image m_tinkerHalf;
     [SerializeField] private Image m_asheHalf;
+    [SerializeField] private bool alwaysVisible;
 
     // Skip Indicator Components
     private Animator m_animator;
@@ -27,15 +28,27 @@ public class SkipIndicator : MonoBehaviour
 
     private void Start()
     {
-        m_animator = GetComponent<Animator>();
+        if (!alwaysVisible) 
+        { 
+            m_animator = GetComponent<Animator>(); 
+        }
         m_canvasGroup = GetComponent<CanvasGroup>();
         isFading = true;
         m_tinkerHalf.fillAmount = 0f;
         m_asheHalf.fillAmount = 0f;
+
+        if (alwaysVisible)
+        {
+            m_canvasGroup.alpha = 1;
+        }
     }
 
     private void Update()
     {
+        if (alwaysVisible)
+        {
+            return;
+        }
         if (m_tinkerHalf.fillAmount >= 0.495f && m_asheHalf.fillAmount >= 0.495f)
         {
             m_tinkerHalf.fillAmount = 0f;
