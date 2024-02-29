@@ -51,8 +51,13 @@ public class TextProducer : MonoBehaviour
     {
         if (m_startOnEnable)
         {
-            ReplaceTextWith(initialText, m_startEffect, 5f * m_speed);
+            m_textLabel.text = string.Empty;
+            StartCoroutine(DelayEnableProduce());
         }
+    }
+    private void OnDisable()
+    {
+        StopAllCoroutines();
     }
 
     /// <summary>
@@ -170,6 +175,11 @@ public class TextProducer : MonoBehaviour
     public void SetDelay(float a_delay)
     {
         m_delay = a_delay;
+    }
+    private IEnumerator DelayEnableProduce()
+    {
+        yield return new WaitForSeconds(m_delay);
+        ReplaceTextWith(initialText, m_startEffect, 5f * m_speed);
     }
 }
 
