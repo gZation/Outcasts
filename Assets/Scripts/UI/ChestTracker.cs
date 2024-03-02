@@ -40,7 +40,7 @@ public class ChestTracker : MonoBehaviour
     }
     public void ResetChestCollectionToLastSave()
     {
-        m_foundChests = (bool[])m_savedFoundChests.Clone();
+        m_foundChests = (bool[])m_savedFoundChests?.Clone();
         currNumberOfChestOpened = m_savedCurrNumberofChestOpened;
         if (currNumberOfChestOpened < requiredChests) m_trackerTextBox.color = Color.white;
         UpdateUI();

@@ -29,6 +29,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private UnityEvent invokeAtStart;
     [SerializeField] private UnityEvent onReload;
     [SerializeField] private UnityEvent OnExit;
+    public UnityEvent onExit => OnExit;
 
     private bool exited = false;
     private void Start() {
@@ -50,7 +51,12 @@ public class LevelManager : MonoBehaviour
         GameManager.Instance.TranisitionExit = m_transitionExit;
         GameManager.Instance.TransitionEnter();
         AudioManager.Instance.PlayAudio();
-        GameManager.Instance.SaveGameToCurrentProfile();
+        if (GameManager.Instance.CurrScene != "hub" && GameManager.Instance.CurrScene != "wreckon_hub")
+        {
+            Debug.Log("Did I save trash? in " + GameManager.Instance.CurrScene);
+            GameManager.Instance.SaveGameToCurrentProfile();
+        }
+       
 
         if (m_pawnControlOnEnter)
         {
@@ -128,6 +134,10 @@ public class LevelManager : MonoBehaviour
     public void DeactivateEvent(int id)
     {
         EventManager.GetEventManager.Deactivated.Invoke(id);
+    }
+    public void MarkAchievement(AchievementType type)
+    {
+        GameManager.Instance.MarkAchievement(type);
     }
     // ------------Legacy, still used-----------
     public void FaceTinkerRight()

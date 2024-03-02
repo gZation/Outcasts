@@ -10,6 +10,7 @@ public class ArtifactChecker : MonoBehaviour
         if (ChestTracker.Instance.IsAllChestsOpen)
         {
             gameObject.SetActive(true);
+            GameManager.Instance.MarkAchievement(AchievementType.TheFuture);
         }
         else
         {

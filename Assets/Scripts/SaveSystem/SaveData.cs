@@ -20,8 +20,10 @@ public class SaveData
     public bool BeatTheCave;
     public bool BeatTheAirDungeon;
     public bool BeatTheFinalLevel;
+    public bool TenGems;
+    public bool TwentyGems;
+    public bool ThirtyGems;
     public bool MTB;
-    public bool Funny;
     public bool RUNNN;
     public bool LightItUp;
     public bool TheFuture;

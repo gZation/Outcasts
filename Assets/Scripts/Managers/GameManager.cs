@@ -51,6 +51,7 @@ public class GameManager : MonoBehaviour, ISaveable
     [SerializeField] private CharacterSelection m_characterSelection;
     [SerializeField] private CharacterSelection m_characterSelection2;
     [SerializeField] private TextMeshProUGUI m_onScreenMessage;
+    [SerializeField] private TextMeshProUGUI m_teamName;
     [SerializeField] private Animator m_cinematicCover;
     [SerializeField] private GameObject m_teamSelection;
     [SerializeField] private SkipIndicator m_skipIndicator;
@@ -80,6 +81,7 @@ public class GameManager : MonoBehaviour, ISaveable
     }
     private Queue<string> m_scenes;
     [SerializeField] private string m_currScene;
+    public string CurrScene => m_currScene;
     
 
     [Header("Dev Settings")]
@@ -88,6 +90,7 @@ public class GameManager : MonoBehaviour, ISaveable
     [SerializeField] private float m_timeTracking;
     [SerializeField] private bool wasReloaded = false;
     public bool WasReloaded => wasReloaded;
+    public string CurrentProfile => m_currentProfile;
 
     // Save Data Tracking
     private int wreckPoints;
@@ -285,6 +288,7 @@ public class GameManager : MonoBehaviour, ISaveable
         ChestTracker.Instance.ShowChestTracker();
         GemTracker.Instance.ShowAsheTracker();
         GemTracker.Instance.ShowTinkerTracker();
+        WreckQuests.Instance.ShowQuests();
     }
 
     public void UnPauseGame()
@@ -301,13 +305,14 @@ public class GameManager : MonoBehaviour, ISaveable
         ChestTracker.Instance.HideChestTracker();
         GemTracker.Instance.HideAsheTracker();
         GemTracker.Instance.HideTinkerTracker();
+        WreckQuests.Instance.HideQuests();
     }
 
     #region Scene Management
-    public void LoadToScene(string scene)
+    public void LoadToScene(string a_scene)
     {
-        wasReloaded = m_currScene == scene;
-        m_currScene = scene;        
+        wasReloaded = m_currScene == a_scene;
+        m_currScene = a_scene;        
         
         TransitionExit();
         StartCoroutine(LoadSceneWithDelay(1.2f));
@@ -386,7 +391,7 @@ public class GameManager : MonoBehaviour, ISaveable
     {
         //Dev Bs only
         DialogueManager.Instance.StopDialogue();
-        if (m_currScene == "hub")
+        if (next.name == "hub")
         {
             m_teamSelection.SetActive(true);
             UIManager.Instance.ISUIIM.actionsAsset = m_defaultActionAsset;
@@ -511,6 +516,7 @@ public class GameManager : MonoBehaviour, ISaveable
             SaveData sd = new SaveData();
             sd.LoadFromJson(json);
             LoadFromSaveData(sd);
+            m_levelManager.onExit.Invoke(); // In order to call that
             LoadToScene(sd.CurrScene); // Better here to not confuse game I hope
             return true;
         }
@@ -527,7 +533,11 @@ public class GameManager : MonoBehaviour, ISaveable
     }
     public void SaveGameToCurrentProfile()
     {
-        if (m_currentProfile != null || m_currentProfile != "")
+        if (m_currentProfile == null || m_currentProfile == "")
+        {
+            m_currentProfile = "";
+            return;
+        }
         ChestTracker.Instance.SaveRecentChestCollection();
         GemTracker.Instance.SaveRecentGemCollection();
         saved_wreckPoints = wreckPoints;
@@ -536,6 +546,7 @@ public class GameManager : MonoBehaviour, ISaveable
     public void ChangeCurrentProfile(string newProfile)
     {
         m_currentProfile = newProfile;
+        m_teamName.text = m_currentProfile.FirstCharacterToUpper();
     }
     public void PauseRecordTimer()
     {
@@ -575,13 +586,21 @@ public class GameManager : MonoBehaviour, ISaveable
                 saved_wreckPoints += 10;
                 sd.BeatTheFinalLevel = true;
                 break;
+            case AchievementType.Gem10:
+                saved_wreckPoints += 5;
+                sd.TenGems = true;
+                break;
+            case AchievementType.Gem20:
+                saved_wreckPoints += 10;
+                sd.TwentyGems = true;
+                break;
+            case AchievementType.Gem30:
+                saved_wreckPoints += 15;
+                sd.ThirtyGems = true;
+                break;
             case AchievementType.MTB:
                 saved_wreckPoints += 8;
                 sd.MTB = true;
-                break;
-            case AchievementType.Funny:
-                saved_wreckPoints += 8;
-                sd.Funny = true;
                 break;
             case AchievementType.RUNNN:
                 saved_wreckPoints += 8;
@@ -599,6 +618,7 @@ public class GameManager : MonoBehaviour, ISaveable
 
         PopulateSaveData(sd);
         FileManagment.WriteToSaveFile(m_currentProfile, sd.ToJson());
+        WreckQuests.Instance.UpdateUI();
     }
     #endregion
 }
@@ -617,8 +637,10 @@ public enum AchievementType
     BeatTheCave,
     BeatTheAirDungeon,
     BeatTheFinalLevel,
+    Gem10,
+    Gem20,
+    Gem30,
     MTB,
-    Funny,
     RUNNN,
     LightItUp,
     TheFuture

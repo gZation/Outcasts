@@ -74,7 +74,9 @@ public class GemTracker : MonoBehaviour
     public void UpdateUI()
     {
         m_tinkerGemTracking.text = m_tinkerGems.ToString();
+        m_tinkerGemTracking.color = m_tinkerGems >= 15 ? Color.green : Color.white;
         m_asheGemTracking.text = m_asheGems.ToString();
+        m_asheGemTracking.color = m_asheGems >= 15 ? Color.green : Color.white;
     }
     public void ShowTinkerTracker()
     {

@@ -16,13 +16,14 @@ public class FireVent : Invokee
     [SerializeField, Tooltip("Used when Auto Flame active"), Range(0.5f, 10f)] 
     private float inactiveDuration = 3f;
     [SerializeField] private float yFlameMax;
+    [SerializeField] private float yFlamePrep = -4.38f;
     [SerializeField] private float yFlameMin = -4.246f;
     [SerializeField] private float speed = 3f;
     
     private Fire m_associatedFire;
     #region Technical
     private float durationSwitch = 0f;
-    
+    private bool flamePrep = false;
     #endregion
     private new void Start()
     {
@@ -34,15 +35,21 @@ public class FireVent : Invokee
     {
         if (m_autoFlame && Time.time >= durationSwitch)
         {
-            flameRise = !flameRise;
-            durationSwitch = Time.time + (flameRise ? activeDuration : inactiveDuration);
+            if (flameRise)
+            {
+                DropFlame();
+            }
+            else
+            {
+                RaiseFlame();
+            }
         }
 
         m_flameCollider.enabled = flameRise;
     }
     private void FixedUpdate()
     {
-        m_associatedFire.transform.localPosition = new Vector2(m_associatedFire.transform.localPosition.x, Mathf.Lerp(m_associatedFire.transform.localPosition.y, flameRise ? yFlameMax : yFlameMin, Time.deltaTime * speed));
+        m_associatedFire.transform.localPosition = new Vector2(m_associatedFire.transform.localPosition.x, Mathf.Lerp(m_associatedFire.transform.localPosition.y, flameRise ? yFlameMax : (flamePrep ? yFlamePrep :  yFlameMin), Time.deltaTime * speed));
     }
 
     protected override void OnActivate()
@@ -69,12 +76,24 @@ public class FireVent : Invokee
     }
     public void RaiseFlame()
     {
-        flameRise = true;
-        durationSwitch = Time.time + activeDuration;
+        StartCoroutine(FlamePrep());
     }
     public void DropFlame()
     {
         flameRise = false;
         durationSwitch = Time.time + inactiveDuration;
+    }
+
+    private IEnumerator FlamePrep()
+    {
+        float tempSpeed = speed;
+        speed = 5f;
+        flameRise = false;
+        flamePrep = true;
+        yield return new WaitForSeconds(0.6f); 
+        speed = tempSpeed;
+        flamePrep = false;
+        flameRise = true;
+        durationSwitch = Time.time + activeDuration;
     }
 }

@@ -129,10 +129,10 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
-      - - {x: 1, y: -1}
+      - - {x: 1, y: 0}
         - {x: 1, y: -7}
         - {x: 7, y: -7}
-        - {x: 7, y: -1}
+        - {x: 7, y: 0}
       tessellationDetail: 0
       bones: []
       spriteID: 1084a40715027fb4581edd207c20920b
@@ -154,10 +154,14 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
-      - - {x: -7, y: -1}
+      - - {x: -7, y: 0}
         - {x: -7, y: -7}
         - {x: 7, y: -7}
-        - {x: 7, y: -1}
+        - {x: 7, y: 0}
+      - - {x: 7, y: 0}
+        - {x: 7, y: 0}
+        - {x: 7, y: 0}
+        - {x: 7, y: 0}
       tessellationDetail: 0
       bones: []
       spriteID: e1187ca0b6120d24696ff777d235d10b
@@ -181,8 +185,8 @@ TextureImporter:
       physicsShape:
       - - {x: -7, y: -7}
         - {x: 0, y: -7}
-        - {x: 0, y: -1}
-        - {x: -7, y: -1}
+        - {x: 0, y: 0}
+        - {x: -7, y: 0}
       tessellationDetail: 0
       bones: []
       spriteID: f902a8ab958fbb341a02d5b9197f64fb
@@ -3759,10 +3763,10 @@ TextureImporter:
       All Tiles_113: -1788451059
       All Tiles_120: 67541117
       All Tiles_60: -729356920
-      All Tiles_136: -471367483
+      All Tiles_50: 1562012691
       All Tiles_54: -1593898373
       All Tiles_156: 505834126
-      All Tiles_50: 1562012691
+      All Tiles_136: -471367483
       All Tiles_64: 1102867965
       All Tiles_23: -1093330620
       All Tiles_21: -1701379064
