@@ -135,9 +135,9 @@ public class LevelManager : MonoBehaviour
     {
         EventManager.GetEventManager.Deactivated.Invoke(id);
     }
-    public void MarkAchievement(AchievementType type)
+    public void MarkAchievement(int type)
     {
-        GameManager.Instance.MarkAchievement(type);
+        GameManager.Instance.MarkAchievement((AchievementType)type);
     }
     // ------------Legacy, still used-----------
     public void FaceTinkerRight()
@@ -237,6 +237,14 @@ public class LevelManager : MonoBehaviour
     public void AsheHideItem()
     {
         GameManager.Instance.Ashe.HideItem();
+    }
+    public void ShowQuestFrame()
+    {
+        WreckQuests.Instance.ShowQuests();
+    }
+    public void HideQuestFrame()
+    {
+        WreckQuests.Instance.HideQuests();
     }
 }
 

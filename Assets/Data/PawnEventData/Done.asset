@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 848375227257def40bf6deb2b80bdc8b, type: 3}
+  m_Name: Done
+  m_EditorClassIdentifier: 
+  pawnEvents:
+  - pawnEventTitle: New Event 1
+    notCinematic: 0
+    pausePawnControl: 0
+    resumePawnControl: 0
+    transitionTime: 0
+    pawnSelection: 0
+    eventAction: 0
+    moveDirection: 0
+    moveSpeed: 0.2
+    timeDuration: 0
+    jumpForce: 0
+    activeDialogueAtTime: 1
+    waitOnDialogue: 1
+    dialogues:
+    - profile: {fileID: 0}
+      alignment: 0
+      externalID: 0
+      charSound: {fileID: 0}
+      initialSound: {fileID: 0}
+      text: 
+      speed: 0
+      delay: 0
+      waitOnInput: 1
+      noWaiting: 0
+      hideProfileAfterDialogue: 1
+      keepTextAfterDialogue: 0
+    invoke: 0
+    activate: 0
+    id: -1
+  - pawnEventTitle: New Event 2
+    notCinematic: 0
+    pausePawnControl: 0
+    resumePawnControl: 0
+    transitionTime: 0
+    pawnSelection: 0
+    eventAction: 0
+    moveDirection: 0
+    moveSpeed: 0.2
+    timeDuration: 0
+    jumpForce: 0
+    activeDialogueAtTime: 0
+    waitOnDialogue: 0
+    dialogues: []
+    invoke: 0
+    activate: 0
+    id: 67
+  skipEvent:
+    changeMusic: 0
+    changeCameraPosition: 0
+    hideDialogue: 0
+    skipWithFade: 0
+    musicSelection: {fileID: 0}
+    cameraNewLocation: {x: 0, y: 0, z: 0}
+    pausePawnControl: 0
+    notCinematic: 0
+    resumePawnControl: 0
+    changeTinkerLocation: 0
+    changeAsheLocation: 0
+    tinkerNewLocation: {x: 0, y: 0, z: 0}
+    asheNewLocation: {x: 0, y: 0, z: 0}
+    invoke: 0
+    activate: 0
+    id: 0
+  hideDialogueAfterEvent: 0
+  skippable: 0

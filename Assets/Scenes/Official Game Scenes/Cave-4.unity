@@ -28608,8 +28608,28 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 997537019407936488, guid: c0592aadc120a5348b27e14a421ec393, type: 3}
+      propertyPath: OnExit.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 997537019407936488, guid: c0592aadc120a5348b27e14a421ec393, type: 3}
       propertyPath: invokeAtStart.m_PersistentCalls.m_Calls.Array.size
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 997537019407936488, guid: c0592aadc120a5348b27e14a421ec393, type: 3}
+      propertyPath: OnExit.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 997537019407936488, guid: c0592aadc120a5348b27e14a421ec393, type: 3}
+      propertyPath: OnExit.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 392282556}
+    - target: {fileID: 997537019407936488, guid: c0592aadc120a5348b27e14a421ec393, type: 3}
+      propertyPath: OnExit.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 997537019407936488, guid: c0592aadc120a5348b27e14a421ec393, type: 3}
+      propertyPath: OnExit.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MarkAchievement
       objectReference: {fileID: 0}
     - target: {fileID: 997537019407936488, guid: c0592aadc120a5348b27e14a421ec393, type: 3}
       propertyPath: invokeAtStart.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -28628,8 +28648,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 997537019407936488, guid: c0592aadc120a5348b27e14a421ec393, type: 3}
+      propertyPath: OnExit.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LevelManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 997537019407936488, guid: c0592aadc120a5348b27e14a421ec393, type: 3}
+      propertyPath: OnExit.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 997537019407936488, guid: c0592aadc120a5348b27e14a421ec393, type: 3}
       propertyPath: invokeAtStart.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 997537019407936488, guid: c0592aadc120a5348b27e14a421ec393, type: 3}
+      propertyPath: OnExit.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 997537019407936488, guid: c0592aadc120a5348b27e14a421ec393, type: 3}
       propertyPath: invokeAtStart.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -71631,7 +71663,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!1001 &801844990
 PrefabInstance:
@@ -74587,7 +74619,7 @@ RectTransform:
   m_Children:
   - {fileID: 1738206869}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}

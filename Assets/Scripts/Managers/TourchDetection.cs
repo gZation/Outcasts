@@ -23,7 +23,7 @@ public class TourchDetection : MonoBehaviour
         litTourches++;
         if (litTourches >= totalTourches)
         {
-            // Complete Achievement
+            GameManager.Instance.MarkAchievement(AchievementType.LightItUp);
         }
     }
 }

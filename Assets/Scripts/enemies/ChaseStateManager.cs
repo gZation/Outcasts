@@ -70,4 +70,11 @@ public class ChaseStateManager : MonoBehaviour
     {
         rightPoint = point;
     }
+    public void CheckAchievmentCondition()
+    {
+        if (!leftPaw.GetComponent<Paw>().Stunned && !rightPaw.GetComponent<Paw>())
+        {
+            GameManager.Instance.MarkAchievement(AchievementType.RUNNN);
+        }
+    }
 }

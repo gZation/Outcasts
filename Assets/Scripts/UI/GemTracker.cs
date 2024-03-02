@@ -46,6 +46,13 @@ public class GemTracker : MonoBehaviour
     {
         m_savedAsheGems = m_asheGems;
         m_savedTinkerGems = m_tinkerGems;
+        for (int i = 1; i <= 3; i++)
+        {
+            if ((m_savedAsheGems + m_savedTinkerGems) >= (i * 10))
+            {
+                GameManager.Instance.MarkAchievement((AchievementType)((int)AchievementType.Gem10 + (i - 1)));
+            }
+        }
     }
     public void TinkerCollectsGem()
     {

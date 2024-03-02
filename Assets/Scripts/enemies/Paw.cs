@@ -12,6 +12,8 @@ public class Paw : MonoBehaviour
     private BoxCollider2D m_boxCollider;
     private int nailHit;
     private float cooldown;
+    private bool stunned = false;
+    public bool Stunned => stunned;
  
     private void Start()
     {
@@ -52,8 +54,11 @@ public class Paw : MonoBehaviour
         m_chaser.UnGrabTarget();
         StartCoroutine(ChaseDisableFor(2f));
     }
+
+    // This is the stun
     private IEnumerator ChaseDisableFor(float seconds)
     {
+        stunned = true;
         m_chaser.StopChase();
         m_boxCollider.enabled = false;
         yield return new WaitForSeconds(seconds);
