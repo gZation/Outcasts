@@ -47,8 +47,8 @@ MonoBehaviour:
     delay: 3
     waitOnInput: 0
     noWaiting: 0
-    hideProfileAfterDialogue: 0
-    keepTextAfterDialogue: 1
+    hideProfileAfterDialogue: 1
+    keepTextAfterDialogue: 0
   - profile: {fileID: 21300000, guid: 181f9066a2b29d4479091abeaf176a9b, type: 3}
     alignment: 0
     externalID: 0

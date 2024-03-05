@@ -56,8 +56,8 @@ MonoBehaviour:
     activeDialogueAtTime: 0
     waitOnDialogue: 0
     dialogues: []
-    invoke: 0
-    activate: 0
+    invoke: 1
+    activate: 1
     id: 67
   skipEvent:
     changeMusic: 0

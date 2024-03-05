@@ -5,15 +5,15 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
+    path: Assets/Scenes/Official Game Scenes/MainMenu.unity
+    guid: 56a531fd4aa0d5540bb7d8cc3ffe5625
+  - enabled: 1
     path: Assets/Scenes/Official Game Scenes/Setup_Solo.unity
     guid: db51a5ae0c51f314ca78815c3f43307b
   - enabled: 1
     path: Assets/Scenes/Official Game Scenes/wreckon_hub.unity
     guid: 3fd9e1e3c4cd90f4087e2a45512bd5ba
-  - enabled: 0
-    path: Assets/Scenes/Official Game Scenes/MainMenu.unity
-    guid: 56a531fd4aa0d5540bb7d8cc3ffe5625
   - enabled: 0
     path: Assets/Scenes/Ryan_Scenes/Dreamhack_startup.unity
     guid: 161c5c8779ec1964ca13ebd7ff906d3b

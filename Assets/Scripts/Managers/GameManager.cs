@@ -495,8 +495,13 @@ public class GameManager : MonoBehaviour, ISaveable
     public void SaveGameToProfile(string a_profileName)
     {
         SaveData sd = new SaveData();
+        if (FileManagment.LoadFromSaveFile(a_profileName, out var json))
+        {
+            sd.LoadFromJson(json);
+        }
         this.PopulateSaveData(sd);
         FileManagment.WriteToSaveFile(a_profileName, sd.ToJson());
+
     }
     public void PopulateSaveData(SaveData a_SaveData)
     {

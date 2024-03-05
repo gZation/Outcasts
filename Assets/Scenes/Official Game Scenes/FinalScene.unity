@@ -23909,6 +23909,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1481022282437053650, guid: a7d0094d6e34e0e4ca28327279a1709b, type: 3}
+      propertyPath: ActivateOnce
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1481022282437053650, guid: a7d0094d6e34e0e4ca28327279a1709b, type: 3}
+      propertyPath: ActivateOnly
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1481022282437053650, guid: a7d0094d6e34e0e4ca28327279a1709b, type: 3}
       propertyPath: activateOnStart
       value: 0
       objectReference: {fileID: 0}
