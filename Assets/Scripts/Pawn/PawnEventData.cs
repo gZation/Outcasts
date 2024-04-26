@@ -31,8 +31,6 @@ public class PawnEventData : ScriptableObject
 [System.Serializable]
 public struct PawnEvent
 {
-    // TODO: Be able to adjust both Tinker and Actions Actions in the Same Event
-    // Include Dialogue to be ran in Dialogue Manager!
     [Header("Level General")] // More Efficent in a new editor
     [SerializeField] private string pawnEventTitle;
     [SerializeField] private bool notCinematic;
