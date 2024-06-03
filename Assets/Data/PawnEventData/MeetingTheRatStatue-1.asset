@@ -465,4 +465,4 @@ MonoBehaviour:
     activate: 0
     id: 0
   hideDialogueAfterEvent: 0
-  skippable: 0
+  skippable: 1

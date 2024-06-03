@@ -102,8 +102,10 @@ public class UIManager : MonoBehaviour
                 break;
             default:
                 button.onClick.AddListener(delegate {
-                    m_menuPanel.SetActive(false);
-                    m_giveUpDefault.SetActive(true);
+                    //m_menuPanel.SetActive(false);
+                    //m_giveUpDefault.SetActive(true);
+                    GameManager.Instance.UnPauseGame();
+                    GameManager.Instance.LoadToScene("hub");
                 });
                 break;
         }
