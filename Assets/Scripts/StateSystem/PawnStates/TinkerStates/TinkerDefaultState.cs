@@ -13,7 +13,7 @@ public class TinkerDefaultState : State
 
     public override void EnterState()
     {
-        //Debug.Log("Switched to AsheDefault");
+        Debug.Log("Switched to TinkerDefault");
     }
     public override void UpdateState()
     {

@@ -155,7 +155,11 @@ public class Pawn : MonoBehaviour
         isJumping = isJumping ? m_rb.velocity.y >= 0.01f : false;
 
         //Make ending of jumps feel more fluid
-        if (m_rb.velocity.y < 0)
+        if (m_rb.velocity.y > jumpForce)
+        {
+            m_rb.velocity = new Vector2(m_rb.velocity.x, jumpForce);
+        }
+        else if (m_rb.velocity.y < 0)
         {
             m_rb.gravityScale = gravityScale * fallGravityMultiplier;
         }

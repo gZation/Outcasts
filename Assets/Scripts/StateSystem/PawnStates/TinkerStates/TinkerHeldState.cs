@@ -1,13 +1,7 @@
 ﻿using UnityEngine;
 
-/// <summary>
-/// I will be honest, this state was a mess in the past, I just swept it all up
-/// Your welcome future reader :)
-/// </summary>
 public class TinkerHeldState : State
 {
-    private Vector2 m_worldPosition;
-    private float m_followingY;
     public TinkerHeldState(Pawn context, PawnStateFactory factory) : base(context, factory)
     {
         m_isRootState = true;
@@ -34,6 +28,7 @@ public class TinkerHeldState : State
 
     public override void EnterState()
     {
+        Debug.Log("Switched to TinkerHeld");
         m_context.CanMove = false;   
     }
 
