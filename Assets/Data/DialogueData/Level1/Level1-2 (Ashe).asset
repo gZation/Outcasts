@@ -16,7 +16,8 @@ MonoBehaviour:
   - profile: {fileID: 21300000, guid: c681f2583894d9941a3de3ed5b2e94db, type: 3}
     alignment: 1
     externalID: 0
-    typeSound: {fileID: 8300000, guid: 9cd919fee9b2973498e76715d1c4382e, type: 3}
+    charSound: {fileID: 0}
+    initialSound: {fileID: 0}
     text: Hey Tinker, there's a button over here!
     speed: 6
     delay: 2
@@ -27,8 +28,9 @@ MonoBehaviour:
   - profile: {fileID: 21300000, guid: c681f2583894d9941a3de3ed5b2e94db, type: 3}
     alignment: 1
     externalID: 0
-    typeSound: {fileID: 8300000, guid: 9cd919fee9b2973498e76715d1c4382e, type: 3}
-    text: I can boost you if you jump on my head
+    charSound: {fileID: 0}
+    initialSound: {fileID: 0}
+    text: Jump on my head and I can boost you up there.
     speed: 6
     delay: 0
     waitOnInput: 0

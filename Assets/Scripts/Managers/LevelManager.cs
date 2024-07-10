@@ -27,6 +27,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private int firstTimeEventID = -1;
     [SerializeField] private int reloadEventID = -1;
     [SerializeField] private UnityEvent invokeAtStart;
+    [SerializeField] private UnityEvent onFirstTime;
     [SerializeField] private UnityEvent onReload;
     [SerializeField] private UnityEvent OnExit;
     public UnityEvent onExit => OnExit;
@@ -76,6 +77,7 @@ public class LevelManager : MonoBehaviour
         }
         else if (!GameManager.Instance.WasReloaded && firstTimeEventID >= 0)
         {
+            onFirstTime.Invoke();
             EventManager.GetEventManager.Activated.Invoke(firstTimeEventID);
         }
     }

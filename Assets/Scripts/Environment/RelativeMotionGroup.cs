@@ -23,6 +23,11 @@ public class RelativeMotionGroup : MonoBehaviour
             objectsOnGroup.Add(collision.transform.parent, collision.transform.parent.parent);
             collision.transform.parent.GetComponent<Pawn>().CurrentGroup = this;
         }
+        if (collision.gameObject.tag == "physical")
+        {
+            objectsOnGroup.Add(collision.transform, collision.transform.parent);
+            collision.transform.SetParent(transform);
+        }
     }
 
     private void OnTriggerStay2D(Collider2D collision)

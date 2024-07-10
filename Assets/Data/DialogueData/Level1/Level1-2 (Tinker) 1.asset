@@ -16,7 +16,8 @@ MonoBehaviour:
   - profile: {fileID: 21300000, guid: 6d88673597054b445bb13b8698863f29, type: 3}
     alignment: 0
     externalID: 0
-    typeSound: {fileID: 8300000, guid: 9cd919fee9b2973498e76715d1c4382e, type: 3}
+    charSound: {fileID: 0}
+    initialSound: {fileID: 0}
     text: Hey Ashe!
     speed: 6
     delay: 1
@@ -27,7 +28,8 @@ MonoBehaviour:
   - profile: {fileID: 21300000, guid: c5d940790fc459848a3dea73f5fd2a9f, type: 3}
     alignment: 0
     externalID: 0
-    typeSound: {fileID: 8300000, guid: 9cd919fee9b2973498e76715d1c4382e, type: 3}
+    charSound: {fileID: 0}
+    initialSound: {fileID: 0}
     text: There's a button up here!
     speed: 6
     delay: 2
@@ -38,8 +40,9 @@ MonoBehaviour:
   - profile: {fileID: 21300000, guid: a8a8571b9bee31d4896dc0e3b0c05b76, type: 3}
     alignment: 0
     externalID: 0
-    typeSound: {fileID: 8300000, guid: 9cd919fee9b2973498e76715d1c4382e, type: 3}
-    text: You mind letting me jump on your head?
+    charSound: {fileID: 0}
+    initialSound: {fileID: 0}
+    text: You mind if I jump on your head for a boost?
     speed: 6
     delay: 0
     waitOnInput: 0

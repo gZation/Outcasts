@@ -69,6 +69,10 @@ public abstract class Invokee : MonoBehaviour
             // Current Implementation Never Calls deactivate
             if (requireMultipleActive)
             {
+                if (activeCount >= requireActiveCount)
+                {
+                    OnDeactivate();
+                }
                 activeCount--;
                 return;
             }

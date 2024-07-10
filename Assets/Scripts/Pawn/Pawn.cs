@@ -332,7 +332,13 @@ public class Pawn : MonoBehaviour
         float temp = this.jumpForce;
         this.jumpForce = jumpForce;
         Jump();
-        this.jumpForce = temp;
+        StartCoroutine(ForceJumpSwap(temp));
+    }
+    private IEnumerator ForceJumpSwap(float temp)
+    {
+        yield return new WaitUntil(() => !IsGrounded);
+        yield return new WaitUntil(() => IsGrounded);
+        jumpForce = temp;
     }
 
     //Old and Deprecated For Now
