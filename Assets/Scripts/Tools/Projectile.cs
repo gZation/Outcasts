@@ -73,12 +73,13 @@ public class Projectile : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collider)
     {
         //Debug.Log("I was entered trigger!");
+        if (collider.isTrigger) return;
         ImpactHandler(collider.gameObject);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //Debug.Log("I was entered Collision!");
-        ImpactHandler(collision.gameObject);
+        //ImpactHandler(collision.gameObject);
     }
 }

@@ -7,7 +7,7 @@ using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[RequireComponent(typeof(Rigidbody2D), typeof(Collider2D))]
+[RequireComponent(typeof(Rigidbody2D), typeof(Collider2D)), SelectionBase]
 public class Pawn : MonoBehaviour
 {
     [Header("Pawn Component References")]

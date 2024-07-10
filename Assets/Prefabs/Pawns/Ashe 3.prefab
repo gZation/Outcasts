@@ -260,7 +260,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_data: {fileID: 11400000, guid: 4ad0501da27572042ad78b7dd7f9d566, type: 2}
   m_user: {fileID: 1860670653781505588}
-  m_forcePower: 300
+  m_forcePower: 400
   m_animator: {fileID: 6443063388588883332}
   m_punchCollider: {fileID: 6443063388588883335}
   m_grabCollider: {fileID: 8177433821788091460}

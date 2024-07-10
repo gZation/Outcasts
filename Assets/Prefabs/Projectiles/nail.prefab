@@ -138,7 +138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_speed: 15
-  forcePower: 2
+  forcePower: 90
   m_impactClip: {fileID: 8300000, guid: 6702c4de14eefbc4b946221aa96f809b, type: 3}
 --- !u!82 &2463035931176782519
 AudioSource:

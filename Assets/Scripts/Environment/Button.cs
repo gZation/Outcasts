@@ -12,8 +12,6 @@ public class Button : Invoker
     [SerializeField]
     private float lengthOfTime = 0.5f;
     private Vector3 buttonPos;
-    private Vector3 basePos;
-    private Vector3 buttonVel;
     private int entered;
     private float timer;
     private bool buttonPressed;
@@ -23,9 +21,7 @@ public class Button : Invoker
     // Start is called before the first frame update
     void Start()
     {
-        basePos = transform.position;
-        buttonPos = basePos + m_pushableButton.position - basePos;
-        buttonVel = Vector3.zero;
+        buttonPos = m_pushableButton.localPosition;
         entered = 0;
         buttonPressed = false;
         buttonPressSound = GetComponent<AudioSource>();
@@ -36,9 +32,9 @@ public class Button : Invoker
     {
         if (timer <= lengthOfTime) {
             if (buttonPressed) {
-                m_pushableButton.position = Vector3.LerpUnclamped(m_pushableButton.position, basePos, timer/lengthOfTime);
+                m_pushableButton.localPosition = Vector3.LerpUnclamped(m_pushableButton.localPosition, Vector2.zero, timer/lengthOfTime);
             } else {
-                m_pushableButton.position = Vector3.LerpUnclamped(m_pushableButton.position, buttonPos, timer/lengthOfTime);
+                m_pushableButton.localPosition = Vector3.LerpUnclamped(m_pushableButton.localPosition, buttonPos, timer/lengthOfTime);
             }
             timer += Time.deltaTime;
         }   

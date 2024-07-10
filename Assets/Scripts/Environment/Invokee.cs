@@ -21,6 +21,12 @@ public abstract class Invokee : MonoBehaviour
     private bool activateOnStart = false;
     [SerializeField, Tooltip("Runs Deactivate during scene load")] 
     private bool deactivateOnStart = false;
+    [SerializeField, Tooltip("Require Multiple Id invokes to activate")]
+    private bool requireMultipleActive = false;
+    [SerializeField, Tooltip("The number of calls required to activate")]
+    protected int requireActiveCount = 1;
+
+    private int activeCount = 0;
 
     protected void Awake()
     {
@@ -46,7 +52,12 @@ public abstract class Invokee : MonoBehaviour
 
         if (other_id == id) 
         {
-            StartCoroutine(DelayActivate());        
+            if (requireMultipleActive)
+            {
+                activeCount++;
+                if (activeCount < requireActiveCount) return;   
+            }
+            StartCoroutine(DelayActivate());
         }    
     }
     protected void ReactOnDeactivate(int other_id)
@@ -55,6 +66,12 @@ public abstract class Invokee : MonoBehaviour
 
         if (other_id == id)
         {
+            // Current Implementation Never Calls deactivate
+            if (requireMultipleActive)
+            {
+                activeCount--;
+                return;
+            }
             OnDeactivate();
         }
 

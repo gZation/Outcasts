@@ -21,7 +21,7 @@ public class Punchable : MonoBehaviour
 
         if (projectile != null)
         {
-            //m_rigidbody2D.AddForce(projectile.ForcePower * Vector2.right);
+            m_rigidbody2D.AddForce(projectile.ForcePower * Vector2.right);
         }
 
     }
@@ -37,7 +37,7 @@ public class Punchable : MonoBehaviour
 
         if (projectile != null)
         {
-            //m_rigidbody2D.AddForce(projectile.ForcePower * Vector2.right);
+            m_rigidbody2D.AddForce(projectile.ForcePower * Vector2.right);
         }
     }
 }

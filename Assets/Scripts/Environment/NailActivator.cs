@@ -30,7 +30,7 @@ public class NailActivator : Invoker
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //count++;
-        if (collision.GetComponent<Projectile>() != null || collision.GetComponent<Gauntlet>() != null)
+        if (collision.GetComponent<Projectile>() != null)
         {
             m_audioSource.Play();
             if (!isActive)
@@ -44,18 +44,10 @@ public class NailActivator : Invoker
             {
                 collision.gameObject.SetActive(false);
             }
-        }  
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        // Will Not Deactivate for the time being
-        //count--;
-        //if (count == 0 && collision.GetComponent<Projectile>() != null) 
-        //{
-        //    isActive = false;
-        //    Deactivate();
-        //    m_spriteRenderer.sprite = inactive_sprite;
-        //}
+        } 
+        if (collision.GetComponent<Gauntlet>() != null)
+        {
+            // Make it shake but not activate
+        }
     }
 }

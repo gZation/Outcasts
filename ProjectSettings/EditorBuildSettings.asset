@@ -28,7 +28,13 @@ EditorBuildSettings:
     guid: 1a372d70cf3a7af45872f9ecc62bb8bd
   - enabled: 1
     path: Assets/Scenes/Official Game Scenes/Cave-3.unity
+    guid: aef2b93c95912457eb77e2cd5f2c7aea
+  - enabled: 1
+    path: Assets/Scenes/Official Game Scenes/Cave-4.unity
     guid: 16b7afadd87b2f747aaa168d6aff3b2a
+  - enabled: 1
+    path: Assets/Scenes/Official Game Scenes/Cave-5.unity
+    guid: 8587b1f07b4b5df4d8baa9c46e8fa536
   - enabled: 1
     path: Assets/Scenes/Official Game Scenes/Air-1.unity
     guid: faa1759db1f67be47ba4c3630132f8e4
@@ -44,12 +50,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Official Game Scenes/Chase-Old.unity
     guid: 16b15106340df884d807571cc58c86ea
-  - enabled: 1
-    path: Assets/Scenes/Official Game Scenes/Cave-2.unity
-    guid: aef2b93c95912457eb77e2cd5f2c7aea
-  - enabled: 1
-    path: Assets/Scenes/Official Game Scenes/Cave-4.unity
-    guid: 8587b1f07b4b5df4d8baa9c46e8fa536
   - enabled: 1
     path: Assets/Scenes/Official Game Scenes/MeetingTheStatue.unity
     guid: 2957ac7e63ba65746a7f95b9caed17f9
@@ -71,4 +71,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Official Game Scenes/Air-2.unity
     guid: 47b00c3445757894eac4524268a23e56
+  - enabled: 1
+    path: Assets/Scenes/Official Game Scenes/Cave-2.unity
+    guid: 029769545c0ef5c42964ad39929bf723
   m_configObjects: {}
