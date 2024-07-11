@@ -39471,6 +39471,67 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6504745310413052668, guid: ebbc849cefea4cc45aab4d0b2f0b37b6, type: 3}
   m_PrefabInstance: {fileID: 845103386}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &899206710
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5894873018757677852, guid: ca716a072f7df1142af8f7d5dc309c16, type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5894873018757677852, guid: ca716a072f7df1142af8f7d5dc309c16, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5894873018757677852, guid: ca716a072f7df1142af8f7d5dc309c16, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5894873018757677852, guid: ca716a072f7df1142af8f7d5dc309c16, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5894873018757677852, guid: ca716a072f7df1142af8f7d5dc309c16, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5894873018757677852, guid: ca716a072f7df1142af8f7d5dc309c16, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5894873018757677852, guid: ca716a072f7df1142af8f7d5dc309c16, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5894873018757677852, guid: ca716a072f7df1142af8f7d5dc309c16, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5894873018757677852, guid: ca716a072f7df1142af8f7d5dc309c16, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5894873018757677852, guid: ca716a072f7df1142af8f7d5dc309c16, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5894873018757677852, guid: ca716a072f7df1142af8f7d5dc309c16, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5894873018757677855, guid: ca716a072f7df1142af8f7d5dc309c16, type: 3}
+      propertyPath: m_Name
+      value: LevelThings SoloController Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 5996488697965631773, guid: ca716a072f7df1142af8f7d5dc309c16, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 11.036377
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ca716a072f7df1142af8f7d5dc309c16, type: 3}
 --- !u!1 &913569572
 GameObject:
   m_ObjectHideFlags: 0

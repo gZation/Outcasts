@@ -58,7 +58,8 @@ public abstract class Invokee : MonoBehaviour
                 if (activeCount < requireActiveCount) return;   
             }
             StartCoroutine(DelayActivate());
-        }    
+            if (ActivateOnce) EventManager.GetEventManager.Activated -= ReactOnActivate;
+        }
     }
     protected void ReactOnDeactivate(int other_id)
     {
@@ -66,20 +67,19 @@ public abstract class Invokee : MonoBehaviour
 
         if (other_id == id)
         {
-            // Current Implementation Never Calls deactivate
             if (requireMultipleActive)
             {
                 if (activeCount >= requireActiveCount)
                 {
                     OnDeactivate();
+                    if (ActivateOnce) EventManager.GetEventManager.Deactivated -= ReactOnDeactivate;
                 }
                 activeCount--;
                 return;
             }
             OnDeactivate();
-        }
-
-        if (ActivateOnce) EventManager.GetEventManager.Deactivated -= ReactOnDeactivate;
+            if (ActivateOnce) EventManager.GetEventManager.Deactivated -= ReactOnDeactivate;
+        } 
     }
 
     protected abstract void OnActivate();
@@ -90,7 +90,7 @@ public abstract class Invokee : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         OnActivate();
-        if (ActivateOnce) EventManager.GetEventManager.Activated -= ReactOnActivate;
+        
     }
 
     #if UNITY_EDITOR
